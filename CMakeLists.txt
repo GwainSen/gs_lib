@@ -6,6 +6,7 @@ INCLUDE(GNUInstallDirs)
 
 ADD_LIBRARY(gs_lib INTERFACE uint512_t.hpp)
 
-set_target_properties(gs_lib PROPERTIES PUBLIC_HEADER uint512_t.hpp)
+#set_target_properties(gs_lib PROPERTIES PUBLIC_HEADER uint512_t.hpp)
+set_target_properties(gs_lib PROPERTIES CMAKE_CXX_STANDARD 20)
 
-install(TARGETS gs_lib  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(FILES uint512_t.hpp DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
