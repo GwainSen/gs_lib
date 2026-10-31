@@ -10,6 +10,7 @@ ADD_LIBRARY(gs_lib INTERFACE
 set_target_properties(gs_lib PROPERTIES CMAKE_CXX_STANDARD 20)
 
 install(FILES
-        uint512_t.hpp
         argument_parser.hpp
+        logger.hpp
+        uint512_t.hpp
         DESTINATION .)
